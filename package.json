@@ -1,0 +1,20 @@
+{
+  "name": "ayra-education-web",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:admin": "npm run dev --workspace @ayra/admin-web",
+    "dev:user": "npm run dev --workspace @ayra/user-web",
+    "build:admin": "npm run build --workspace @ayra/admin-web",
+    "build:user": "npm run build --workspace @ayra/user-web",
+    "build": "npm run build:admin && npm run build:user"
+  },
+  "dependencies": {
+    "react-router": "6.30.3",
+    "react-router-dom": "6.30.3"
+  }
+}
